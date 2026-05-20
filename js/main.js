@@ -44,8 +44,9 @@ function initCanvas(canvasId, dotCount = 55, maxDist = 130, opacity = 1) {
           ctx.beginPath();
           ctx.moveTo(dots[i].x, dots[i].y);
           ctx.lineTo(dots[j].x, dots[j].y);
-          ctx.strokeStyle = `rgba(232,88,42,${opacity * 0.18 * (1 - dist / maxDist)})`;
-          ctx.lineWidth = 0.6;
+          const alpha = opacity * 0.25 * (1 - dist / maxDist);
+          ctx.strokeStyle = `rgba(65,88,208,${alpha})`;
+          ctx.lineWidth = 0.7;
           ctx.stroke();
         }
       }
@@ -54,7 +55,7 @@ function initCanvas(canvasId, dotCount = 55, maxDist = 130, opacity = 1) {
     dots.forEach(d => {
       ctx.beginPath();
       ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(232,88,42,${opacity * 0.5})`;
+      ctx.fillStyle = `rgba(0,229,255,${opacity * 0.6})`;
       ctx.fill();
     });
 
