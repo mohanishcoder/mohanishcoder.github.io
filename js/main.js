@@ -73,11 +73,11 @@ function initTypewriter() {
   if (!el) return;
 
   const words = [
-    'Senior Product Manager',
-    'SAFe® Agile Leader',
-    'Digital Transformation Expert',
-    'ART Program Manager',
-    'Strategic Product Thinker',
+    'Technical Product Manager',
+    'AI Product Strategist',
+    'SAFe® ART Lead',
+    'API-First Product Builder',
+    'Enterprise Platform Architect',
   ];
 
   let wi = 0, ci = 0, deleting = false;
@@ -234,6 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSkillBars();
   initScrollReveal();
   initImgFallback();
-  initCanvas('heroCanvas',    55, 130, 1.0);
-  initCanvas('contactCanvas', 30, 110, 0.6);
+  const isMobile = window.innerWidth < 640;
+  initCanvas('heroCanvas',    isMobile ? 25 : 55, 130, 1.0);
+  initCanvas('contactCanvas', isMobile ? 15 : 30, 110, 0.6);
 });

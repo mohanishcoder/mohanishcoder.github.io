@@ -216,6 +216,7 @@ section { padding: 100px 0; position: relative; z-index: 1; }
 #heroCanvas {
   position: absolute; inset: 0; width: 100%; height: 100%;
   pointer-events: none; z-index: 0; opacity: 0.5;
+  will-change: contents;
 }
 
 .hero-container {
@@ -335,12 +336,16 @@ section { padding: 100px 0; position: relative; z-index: 1; }
 @keyframes floatB { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
 @keyframes floatC { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
 
+/* Mobile badge strip — hidden on desktop */
+.hero-badges-mobile {
+  display: none;
+}
+
 /* Scroll hint */
 .hero-scroll-hint {
   display: flex; flex-direction: column; align-items: center; gap: 10px;
   position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
-  font-size: 11px; letter-spacing: 2px; color: var(--text-muted);
-  text-transform: uppercase; z-index: 1;
+  z-index: 1;
 }
 .scroll-line {
   width: 1px; height: 48px;
@@ -795,6 +800,18 @@ section { padding: 100px 0; position: relative; z-index: 1; }
   .exp-metric { flex: 1 1 40%; }
   .photo-frame { width: 240px; height: 290px; }
   .float-badge { display: none; }
+  .hero-badges-mobile {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+    margin-top: 16px; width: 100%;
+  }
+  .float-badge-mob {
+    background: rgba(13, 21, 53, 0.9);
+    border: 1px solid var(--border-neon);
+    border-radius: 50px; padding: 7px 14px;
+    font-size: 12px; font-weight: 600; color: var(--text);
+    white-space: nowrap;
+    box-shadow: var(--shadow-sm), 0 0 8px rgba(0,229,255,0.08);
+  }
   .footer-inner { flex-direction: column; text-align: center; }
   .footer-links { justify-content: center; }
   .cta-contact-row { flex-direction: column; align-items: center; }
