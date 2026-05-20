@@ -185,7 +185,8 @@ section { padding: 100px 0; position: relative; z-index: 1; }
   min-height: 100vh;
   display: flex; flex-direction: column; justify-content: center;
   padding-top: var(--nav-h);
-  position: relative; overflow: hidden;
+  position: relative;
+  overflow: clip; /* clips decorative blobs without affecting position:absolute children on scroll */
   background: linear-gradient(135deg, #060d1f 0%, #0a1230 50%, #0d0f28 100%);
 }
 
@@ -283,7 +284,10 @@ section { padding: 100px 0; position: relative; z-index: 1; }
 .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
 
 /* Photo Frame — neon oval glow matching image */
-.hero-photo { display: flex; justify-content: center; align-items: center; }
+.hero-photo {
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+}
 .photo-frame { position: relative; width: 380px; height: 460px; }
 .profile-img {
   width: 100%; height: 100%; object-fit: cover;
@@ -292,29 +296,32 @@ section { padding: 100px 0; position: relative; z-index: 1; }
   filter: brightness(0.95) contrast(1.05) saturate(1.1);
   box-shadow: var(--shadow-lg);
 }
+/* Simplified ring — no webkit-mask, works across all browsers */
 .photo-accent-ring {
-  position: absolute; inset: -16px;
-  border-radius: 220px 220px 180px 180px;
-  border: 2px solid transparent;
-  background: linear-gradient(135deg, var(--accent), var(--neon), var(--accent2)) border-box;
-  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: destination-out;
-  mask-composite: exclude;
+  position: absolute; inset: -14px;
+  border-radius: 216px 216px 176px 176px;
+  border: 2px solid var(--accent);
+  box-shadow:
+    0 0 16px var(--accent-glow),
+    0 0 32px rgba(0,229,255,0.15),
+    inset 0 0 12px rgba(200,80,192,0.05);
   z-index: 1;
   animation: ringPulse 3s ease-in-out infinite;
 }
 .photo-accent-ring-glow {
-  position: absolute; inset: -20px;
-  border-radius: 225px 225px 185px 185px;
-  background: linear-gradient(135deg, rgba(200,80,192,0.15), rgba(0,229,255,0.1), rgba(65,88,208,0.15));
-  filter: blur(20px);
+  position: absolute; inset: -28px;
+  border-radius: 228px 228px 188px 188px;
+  background: radial-gradient(ellipse at center,
+    rgba(200,80,192,0.18) 0%,
+    rgba(0,229,255,0.1) 50%,
+    transparent 75%);
+  filter: blur(18px);
   z-index: 0;
   animation: ringPulse 3s ease-in-out infinite 0.5s;
 }
 @keyframes ringPulse {
   0%,100% { opacity:0.7; transform:scale(1); }
-  50%     { opacity:1; transform:scale(1.02); }
+  50%     { opacity:1; transform:scale(1.025); }
 }
 
 /* Floating badges */
@@ -339,6 +346,14 @@ section { padding: 100px 0; position: relative; z-index: 1; }
 /* Mobile badge strip — hidden on desktop */
 .hero-badges-mobile {
   display: none;
+}
+.float-badge-mob {
+  background: rgba(13, 21, 53, 0.9);
+  border: 1px solid var(--border-neon);
+  border-radius: 50px; padding: 7px 14px;
+  font-size: 12px; font-weight: 600; color: var(--text);
+  white-space: nowrap;
+  box-shadow: var(--shadow-sm), 0 0 8px rgba(0,229,255,0.08);
 }
 
 /* Scroll hint */
@@ -757,14 +772,28 @@ section { padding: 100px 0; position: relative; z-index: 1; }
    RESPONSIVE — TABLET (≤900px)
 ════════════════════════════════════════════ */
 @media (max-width: 900px) {
-  .hero-container { grid-template-columns: 1fr; gap: 48px; text-align: center; }
+  .hero-container { grid-template-columns: 1fr; gap: 32px; text-align: center; }
   .hero-tagline { margin: 0 auto 28px; }
   .hero-mini-stats { margin: 0 auto 32px; }
   .hero-cta { justify-content: center; }
   .hero-photo { order: -1; }
-  .photo-frame { width: 280px; height: 340px; }
-  .float-badge-1 { left: -40px; } .float-badge-2 { left: -50px; }
-  .float-badge-3 { right: -40px; } .float-badge-4 { right: -30px; }
+
+  /* Photo frame: responsive width, cap height proportionally */
+  .photo-frame {
+    width: min(300px, 72vw);
+    height: auto;
+    aspect-ratio: 300 / 380;
+  }
+
+  /* Hide absolute float badges — shown via mobile strip instead */
+  .float-badge { display: none !important; }
+
+  /* Show mobile badge strip at tablet too */
+  .hero-badges-mobile {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+    margin-top: 20px; width: 100%;
+  }
+
   .hero-eyebrow { margin: 0 auto 24px; }
   .about-grid { grid-template-columns: 1fr; gap: 48px; }
   .about-photo-col { display: flex; justify-content: center; }
@@ -798,20 +827,13 @@ section { padding: 100px 0; position: relative; z-index: 1; }
   .exp-card-top { flex-direction: column; align-items: flex-start; }
   .exp-metrics-row { flex-wrap: wrap; }
   .exp-metric { flex: 1 1 40%; }
-  .photo-frame { width: 240px; height: 290px; }
-  .float-badge { display: none; }
-  .hero-badges-mobile {
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
-    margin-top: 16px; width: 100%;
+  .photo-frame {
+    width: min(220px, 65vw);
+    aspect-ratio: 220 / 270;
+    height: auto;
   }
-  .float-badge-mob {
-    background: rgba(13, 21, 53, 0.9);
-    border: 1px solid var(--border-neon);
-    border-radius: 50px; padding: 7px 14px;
-    font-size: 12px; font-weight: 600; color: var(--text);
-    white-space: nowrap;
-    box-shadow: var(--shadow-sm), 0 0 8px rgba(0,229,255,0.08);
-  }
+  .hero-badges-mobile { gap: 6px; }
+  .float-badge-mob { font-size: 11px; padding: 6px 12px; }
   .footer-inner { flex-direction: column; text-align: center; }
   .footer-links { justify-content: center; }
   .cta-contact-row { flex-direction: column; align-items: center; }
