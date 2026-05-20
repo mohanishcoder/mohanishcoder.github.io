@@ -7,21 +7,21 @@
   <meta name="description" content="Senior Product Manager with 12+ years of experience in SAFe Agile delivery, enterprise product strategy, and leading cross-functional global teams." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
+  <!-- ══════════════════════════════ NAV ══════════════════════════════ -->
   <nav id="navbar">
     <div class="nav-container">
       <a href="#home" class="nav-logo">MS</a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#home"       class="nav-link active">Home</a></li>
+        <li><a href="#about"      class="nav-link">About</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#skills"     class="nav-link">Skills</a></li>
+        <li><a href="#contact"    class="nav-link">Contact</a></li>
       </ul>
       <a href="mailto:mohanishshah89@gmail.com" class="btn-hire">Hire Me →</a>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -30,92 +30,188 @@
     </div>
   </nav>
 
-  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+  <!-- ══════════════════════════════ HERO ══════════════════════════════ -->
   <section id="home" class="hero">
+    <canvas id="heroCanvas"></canvas>
+
     <div class="hero-container">
       <div class="hero-content">
-        <span class="hero-tag">👋 Hey, I'm</span>
+        <div class="hero-eyebrow">
+          <span class="live-dot"></span>
+          <span class="mono">Available for new opportunities</span>
+        </div>
         <h1 class="hero-name">Mohanish<br /><em>Shah</em></h1>
-        <p class="hero-role">Senior Product Manager</p>
+        <p class="hero-role">
+          <span id="typewriter"></span><span class="cursor">|</span>
+        </p>
         <p class="hero-tagline">
           Driving enterprise-scale product strategy, SAFe® Agile delivery,
-          and cross-functional team excellence across FinTech, InsureTech &
-          Retail domains.
+          and cross-functional team excellence across FinTech, InsureTech &amp;
+          Technology domains.
         </p>
+
+        <div class="hero-mini-stats">
+          <div class="mini-stat">
+            <strong>12<span class="mini-accent">+</span></strong>
+            <span>Years</span>
+          </div>
+          <div class="mini-divider"></div>
+          <div class="mini-stat">
+            <strong>100<span class="mini-accent">+</span></strong>
+            <span>Team Members</span>
+          </div>
+          <div class="mini-divider"></div>
+          <div class="mini-stat">
+            <strong>SAFe®</strong>
+            <span>×3 Certified</span>
+          </div>
+        </div>
+
         <div class="hero-cta">
           <a href="#experience" class="btn-primary">View My Work →</a>
           <a href="assets/Mohanish_CV.pdf" class="btn-secondary" download>Download CV</a>
         </div>
       </div>
+
       <div class="hero-photo">
         <div class="photo-frame">
           <img src="images/profile.png" alt="Mohanish Shah" class="profile-img" />
           <div class="photo-accent-ring"></div>
-          <div class="photo-dot dot-1"></div>
-          <div class="photo-dot dot-2"></div>
+
+          <div class="float-badge float-badge-1">⚡ SAFe® ART Lead</div>
+          <div class="float-badge float-badge-2">🏆 Award Winner</div>
+          <div class="float-badge float-badge-3">📊 Fortune 100</div>
+          <div class="float-badge float-badge-4">🌍 Global Teams</div>
         </div>
       </div>
     </div>
+
     <div class="hero-scroll-hint">
       <span>Scroll</span>
       <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
-  <section id="about" class="about">
+  <!-- ════════════════════════ IMPACT STRIP ════════════════════════ -->
+  <section class="impact-strip">
     <div class="container">
-      <div class="section-label">ABOUT ME</div>
-      <div class="about-grid">
-        <div class="about-text">
-          <h2 class="section-heading">
-            I'm a Product Manager Specialising In
-            <em>Enterprise Digital Transformation</em> &amp;
-            SAFe® Agile Delivery.
-          </h2>
-          <p class="about-bio">
-            With over 12 years of experience spanning FinTech, Insurance, Fleet Management, and Retail, I lead Agile Release Trains, define product strategy, and drive critical "Change the Business" initiatives that align customer value with organisational goals. I bridge the gap between business stakeholders and engineering teams to ship products that matter.
-          </p>
-          <a href="#contact" class="btn-primary">Let's Connect →</a>
+      <div class="impact-grid">
+        <div class="impact-card">
+          <div class="impact-icon">⚡</div>
+          <div class="impact-num-wrap">
+            <span class="impact-num" data-count="12">0</span><span class="impact-suf">+</span>
+          </div>
+          <span class="impact-label">Years of Experience</span>
         </div>
-        <div class="stats-grid">
-          <div class="stat-card">
-            <span class="stat-number">12<span class="stat-plus">+</span></span>
-            <span class="stat-label">Years of Experience</span>
+        <div class="impact-card">
+          <div class="impact-icon">👥</div>
+          <div class="impact-num-wrap">
+            <span class="impact-num" data-count="100">0</span><span class="impact-suf">+</span>
           </div>
-          <div class="stat-card">
-            <span class="stat-number">5</span>
-            <span class="stat-label">Companies Delivered At</span>
+          <span class="impact-label">Team Members Led</span>
+        </div>
+        <div class="impact-card">
+          <div class="impact-icon">🏢</div>
+          <div class="impact-num-wrap">
+            <span class="impact-num" data-count="5">0</span>
           </div>
-          <div class="stat-card">
-            <span class="stat-number">100<span class="stat-plus">+</span></span>
-            <span class="stat-label">Team Members Led</span>
+          <span class="impact-label">Enterprises Delivered At</span>
+        </div>
+        <div class="impact-card">
+          <div class="impact-icon">🎓</div>
+          <div class="impact-num-wrap">
+            <span class="impact-num" data-count="3">0</span>
           </div>
-          <div class="stat-card">
-            <span class="stat-number">3</span>
-            <span class="stat-label">SAFe® Certifications</span>
+          <span class="impact-label">SAFe® Certifications</span>
+        </div>
+        <div class="impact-card">
+          <div class="impact-icon">🚗</div>
+          <div class="impact-num-wrap">
+            <span class="impact-num" data-count="10">0</span><span class="impact-suf">K+</span>
           </div>
+          <span class="impact-label">Fleet Assets Managed</span>
+        </div>
+        <div class="impact-card">
+          <div class="impact-icon">💰</div>
+          <div class="impact-num-wrap">
+            <span class="impact-num-text">F100</span>
+          </div>
+          <span class="impact-label">Fortune 100 Clientele</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═════════════════════════════ EXPERIENCE ═════════════════════════════ -->
+  <!-- ══════════════════════════ ABOUT ══════════════════════════ -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-photo-col">
+          <div class="about-img-wrap">
+            <img src="images/profile.png" alt="Mohanish Shah" class="about-profile-img" />
+            <div class="about-current-badge">
+              <span class="live-dot"></span>
+              <span>Currently @ Accenture</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <div class="section-label">ABOUT ME</div>
+          <h2 class="section-heading">
+            I'm a Senior PM Specialising In
+            <em>Enterprise Digital Transformation</em>
+            &amp; SAFe® Agile Delivery.
+          </h2>
+          <p class="about-bio">
+            With over 12 years of experience spanning FinTech, Insurance, Fleet Management, SaaS, and Retail, I lead Agile Release Trains, define product strategy, and drive critical "Change the Business" initiatives. I bridge the gap between business stakeholders and engineering teams — turning ambiguous problems into shipped products that create real user and business value.
+          </p>
+
+          <div class="specializations">
+            <span class="spec-tag">🎯 Product Strategy</span>
+            <span class="spec-tag">📋 Backlog Management</span>
+            <span class="spec-tag">🔄 SAFe® PI Planning</span>
+            <span class="spec-tag">🤝 Stakeholder Alignment</span>
+            <span class="spec-tag">💡 MVP Development</span>
+            <span class="spec-tag">📊 OKRs & Metrics</span>
+            <span class="spec-tag">🏗️ Roadmapping</span>
+            <span class="spec-tag">⚙️ Agile Transformation</span>
+          </div>
+
+          <a href="#contact" class="btn-primary">Let's Connect →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════ EXPERIENCE ════════════════════════ -->
   <section id="experience" class="experience">
     <div class="container">
       <div class="section-label">EXPERIENCE</div>
       <h2 class="section-heading centered">A Career Built on<br /><em>Delivery &amp; Impact</em></h2>
 
-      <div class="exp-cards">
+      <div class="exp-timeline">
 
         <!-- Accenture -->
-        <div class="exp-card">
-          <div class="exp-card-header">
-            <div>
-              <span class="exp-company">Accenture</span>
-              <span class="exp-role">Product Manager</span>
-            </div>
+        <div class="exp-card reveal" style="--card-color:#A100FF">
+          <div class="exp-card-top">
+            <div class="exp-domain-badge" style="background:rgba(161,0,255,0.12);color:#c44dff">🏢 Global Technology</div>
             <span class="exp-date">Feb 2025 – Present</span>
+          </div>
+          <div class="exp-card-header">
+            <div class="exp-company-wrap">
+              <div class="exp-logo-dot" style="background:#A100FF"></div>
+              <div>
+                <span class="exp-company">Accenture</span>
+                <span class="exp-role">Product Manager</span>
+              </div>
+            </div>
+          </div>
+          <div class="exp-metrics-row">
+            <div class="exp-metric"><span class="exp-metric-val">100+</span><span class="exp-metric-lbl">Team Size</span></div>
+            <div class="exp-metric"><span class="exp-metric-val">ART</span><span class="exp-metric-lbl">Program Scale</span></div>
+            <div class="exp-metric"><span class="exp-metric-val">Global</span><span class="exp-metric-lbl">Reach</span></div>
+            <div class="exp-metric"><span class="exp-metric-val">SAFe®</span><span class="exp-metric-lbl">Framework</span></div>
           </div>
           <p class="exp-desc">Leading an Agile Release Train of 100+ distributed &amp; cross-functional global team members, transforming core technology ecosystems to strengthen resiliency and world-class customer experience.</p>
           <ul class="exp-bullets">
@@ -124,66 +220,96 @@
             <li>Orchestrating alignment across Product Heads, Business Leads, Architecture, Legal, Compliance &amp; Marketing.</li>
           </ul>
           <div class="exp-tags">
-            <span class="tag">SAFe® ART</span>
-            <span class="tag">PI Planning</span>
-            <span class="tag">Backlog Refinement</span>
-            <span class="tag">MVP Strategy</span>
+            <span class="tag">SAFe® ART</span><span class="tag">PI Planning</span>
+            <span class="tag">Backlog Refinement</span><span class="tag">MVP Strategy</span>
           </div>
         </div>
 
         <!-- TIAA GBS -->
-        <div class="exp-card">
-          <div class="exp-card-header">
-            <div>
-              <span class="exp-company">TIAA GBS</span>
-              <span class="exp-role">Senior Product Owner</span>
-            </div>
+        <div class="exp-card reveal" style="--card-color:#1B75BC">
+          <div class="exp-card-top">
+            <div class="exp-domain-badge" style="background:rgba(27,117,188,0.12);color:#4da6ff">💰 FinTech / Insurance</div>
             <span class="exp-date">Nov 2021 – Jan 2025</span>
           </div>
-          <p class="exp-desc">Worked with a Fortune 100 financial services provider managing a microservice-based calculation engine for standard retirement service calculations serving millions of clients.</p>
+          <div class="exp-card-header">
+            <div class="exp-company-wrap">
+              <div class="exp-logo-dot" style="background:#1B75BC"></div>
+              <div>
+                <span class="exp-company">TIAA GBS</span>
+                <span class="exp-role">Senior Product Owner</span>
+              </div>
+            </div>
+          </div>
+          <div class="exp-metrics-row">
+            <div class="exp-metric"><span class="exp-metric-val">F100</span><span class="exp-metric-lbl">Client Tier</span></div>
+            <div class="exp-metric"><span class="exp-metric-val">Millions</span><span class="exp-metric-lbl">End Users</span></div>
+            <div class="exp-metric"><span class="exp-metric-val">3+ Yrs</span><span class="exp-metric-lbl">Tenure</span></div>
+            <div class="exp-metric"><span class="exp-metric-val">Micro­services</span><span class="exp-metric-lbl">Architecture</span></div>
+          </div>
+          <p class="exp-desc">Worked with a Fortune 100 financial services provider managing a microservice-based calculation engine for retirement service calculations serving millions of clients globally.</p>
           <ul class="exp-bullets">
             <li>Led a cross-functional team of internal employees and external contractors across full SDLC.</li>
             <li>Owned program backlog building, maintenance, and prioritisation based on user value and risk.</li>
-            <li>Facilitated release planning, sprint planning, and retrospectives; authored stories in Jira.</li>
+            <li>Gathered business requirements across departments to ensure seamless data migration to new systems and downstream applications.</li>
           </ul>
           <div class="exp-tags">
-            <span class="tag">FinTech</span>
-            <span class="tag">Microservices</span>
-            <span class="tag">Jira</span>
-            <span class="tag">Data Migration</span>
+            <span class="tag">FinTech</span><span class="tag">Microservices</span>
+            <span class="tag">Jira</span><span class="tag">Data Migration</span>
           </div>
         </div>
 
         <!-- Gateway Group -->
-        <div class="exp-card">
-          <div class="exp-card-header">
-            <div>
-              <span class="exp-company">Gateway Group</span>
-              <span class="exp-role">Product Owner</span>
-            </div>
+        <div class="exp-card reveal" style="--card-color:#00B37D">
+          <div class="exp-card-top">
+            <div class="exp-domain-badge" style="background:rgba(0,179,125,0.12);color:#00d49a">🚗 Fleet Management</div>
             <span class="exp-date">Jun 2018 – Oct 2021</span>
           </div>
-          <p class="exp-desc">Built an integrated IT solution for a UK-based leasing finance company managing a fleet of 10,000 vehicles, acting as the voice of the customer throughout the product lifecycle.</p>
+          <div class="exp-card-header">
+            <div class="exp-company-wrap">
+              <div class="exp-logo-dot" style="background:#00B37D"></div>
+              <div>
+                <span class="exp-company">Gateway Group</span>
+                <span class="exp-role">Product Owner</span>
+              </div>
+            </div>
+          </div>
+          <div class="exp-metrics-row">
+            <div class="exp-metric"><span class="exp-metric-val">10,000+</span><span class="exp-metric-lbl">Vehicles</span></div>
+            <div class="exp-metric"><span class="exp-metric-val">UK</span><span class="exp-metric-lbl">Market</span></div>
+            <div class="exp-metric"><span class="exp-metric-val">3+ Yrs</span><span class="exp-metric-lbl">Tenure</span></div>
+            <div class="exp-metric"><span class="exp-metric-val">🏆 Award</span><span class="exp-metric-lbl">Outstanding Perf.</span></div>
+          </div>
+          <p class="exp-desc">Built an integrated IT solution for a UK-based leasing finance company managing a fleet of 10,000 vehicles, acting as the single voice of the customer throughout the product lifecycle.</p>
           <ul class="exp-bullets">
-            <li>Defined and prioritised the product backlog as the single voice of customer.</li>
+            <li>Defined and prioritised the product backlog, driving all backlog grooming and acceptance testing.</li>
             <li>Created System Requirement Specification documents from client functional requirements.</li>
-            <li>Drove backlog grooming, acceptance testing, and iteration delivery.</li>
+            <li>Won the <strong>Outstanding Performance Award</strong> at the Employee Reward &amp; Recognition Programme.</li>
           </ul>
           <div class="exp-tags">
-            <span class="tag">Fleet Management</span>
-            <span class="tag">SRS Documentation</span>
-            <span class="tag">Agile</span>
+            <span class="tag">Fleet Management</span><span class="tag">SRS Documentation</span>
+            <span class="tag">Agile</span><span class="tag">🏆 Award Winner</span>
           </div>
         </div>
 
         <!-- Openxcell -->
-        <div class="exp-card">
-          <div class="exp-card-header">
-            <div>
-              <span class="exp-company">Openxcell Technolabs</span>
-              <span class="exp-role">Business Analyst</span>
-            </div>
+        <div class="exp-card reveal" style="--card-color:#E67E22">
+          <div class="exp-card-top">
+            <div class="exp-domain-badge" style="background:rgba(230,126,34,0.12);color:#f0a060">💻 SaaS / Technology</div>
             <span class="exp-date">Dec 2015 – Oct 2017</span>
+          </div>
+          <div class="exp-card-header">
+            <div class="exp-company-wrap">
+              <div class="exp-logo-dot" style="background:#E67E22"></div>
+              <div>
+                <span class="exp-company">Openxcell Technolabs</span>
+                <span class="exp-role">Business Analyst</span>
+              </div>
+            </div>
+          </div>
+          <div class="exp-metrics-row">
+            <div class="exp-metric"><span class="exp-metric-val">SaaS</span><span class="exp-metric-lbl">Platform</span></div>
+            <div class="exp-metric"><span class="exp-metric-val">Agile</span><span class="exp-metric-lbl">Methodology</span></div>
+            <div class="exp-metric"><span class="exp-metric-val">2 Yrs</span><span class="exp-metric-lbl">Tenure</span></div>
           </div>
           <p class="exp-desc">Facilitated Agile ceremonies for a SaaS-based Order &amp; Inventory Management Platform, translating complex client requirements into actionable user stories and backlog items.</p>
           <ul class="exp-bullets">
@@ -192,20 +318,29 @@
             <li>Collaborated with dev teams to refine estimations for features and stories.</li>
           </ul>
           <div class="exp-tags">
-            <span class="tag">SaaS</span>
-            <span class="tag">User Stories</span>
-            <span class="tag">Agile Metrics</span>
+            <span class="tag">SaaS</span><span class="tag">User Stories</span><span class="tag">Agile Metrics</span>
           </div>
         </div>
 
         <!-- Pantaloons -->
-        <div class="exp-card">
-          <div class="exp-card-header">
-            <div>
-              <span class="exp-company">Pantaloons Retail</span>
-              <span class="exp-role">Department Manager</span>
-            </div>
+        <div class="exp-card reveal" style="--card-color:#E74C3C">
+          <div class="exp-card-top">
+            <div class="exp-domain-badge" style="background:rgba(231,76,60,0.12);color:#f07070">🛍️ Retail</div>
             <span class="exp-date">Jul 2014 – Dec 2015</span>
+          </div>
+          <div class="exp-card-header">
+            <div class="exp-company-wrap">
+              <div class="exp-logo-dot" style="background:#E74C3C"></div>
+              <div>
+                <span class="exp-company">Pantaloons Retail</span>
+                <span class="exp-role">Department Manager</span>
+              </div>
+            </div>
+          </div>
+          <div class="exp-metrics-row">
+            <div class="exp-metric"><span class="exp-metric-val">35</span><span class="exp-metric-lbl">Associates Led</span></div>
+            <div class="exp-metric"><span class="exp-metric-val">12%</span><span class="exp-metric-lbl">Revenue Share</span></div>
+            <div class="exp-metric"><span class="exp-metric-val">#1</span><span class="exp-metric-lbl">West Zone Store</span></div>
           </div>
           <p class="exp-desc">Managed the Non-Apparels department contributing 12% of overall store sales at the largest store in West Zone, leading a team of 35 associates.</p>
           <ul class="exp-bullets">
@@ -213,9 +348,7 @@
             <li>Managed department operations, inventory, and team scheduling end-to-end.</li>
           </ul>
           <div class="exp-tags">
-            <span class="tag">Retail</span>
-            <span class="tag">Team Leadership</span>
-            <span class="tag">Operations</span>
+            <span class="tag">Retail</span><span class="tag">Team Leadership</span><span class="tag">Operations</span>
           </div>
         </div>
 
@@ -223,63 +356,132 @@
     </div>
   </section>
 
-  <!-- ════════════════════════════════ SKILLS ════════════════════════════════ -->
+  <!-- ════════════════════════ SKILLS ════════════════════════ -->
   <section id="skills" class="skills">
     <div class="container">
-      <div class="section-label">TOOL STACK</div>
-      <h2 class="section-heading centered">Skills &amp; <em>Technologies</em></h2>
+      <div class="section-label">SKILLS &amp; TOOLS</div>
+      <h2 class="section-heading centered">Expertise &amp; <em>Proficiency</em></h2>
 
-      <div class="skills-groups">
+      <div class="skills-layout">
+        <div class="skills-col reveal">
+          <h3 class="skills-col-title">Core PM Skills</h3>
 
-        <div class="skills-group">
-          <h3 class="skills-group-title">Project Management</h3>
-          <div class="skills-chips">
-            <span class="chip">Jira</span>
-            <span class="chip">Azure DevOps</span>
-            <span class="chip">Confluence</span>
-            <span class="chip">Jira Align</span>
-            <span class="chip">Trello</span>
-            <span class="chip">Notion</span>
-            <span class="chip">Asana</span>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Product Strategy &amp; Vision</span><span class="skill-pct">95%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Backlog Management</span><span class="skill-pct">95%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>SAFe® PI Planning</span><span class="skill-pct">93%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="93"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Stakeholder Management</span><span class="skill-pct">90%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Requirements Elicitation</span><span class="skill-pct">88%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Agile / Scrum Delivery</span><span class="skill-pct">95%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>MVP &amp; Feature Definition</span><span class="skill-pct">90%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
           </div>
         </div>
 
-        <div class="skills-group">
-          <h3 class="skills-group-title">Technology</h3>
-          <div class="skills-chips">
-            <span class="chip">SQL</span>
-            <span class="chip">CI/CD</span>
-            <span class="chip">MongoDB</span>
-            <span class="chip">Microservice Architecture</span>
+        <div class="skills-col reveal">
+          <h3 class="skills-col-title">Tools &amp; Platforms</h3>
+
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Jira / Azure DevOps</span><span class="skill-pct">93%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="93"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Confluence / Jira Align</span><span class="skill-pct">90%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Figma (Wireframing)</span><span class="skill-pct">72%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="72"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Miro / ProductPlan</span><span class="skill-pct">82%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>SQL / MongoDB</span><span class="skill-pct">65%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="65"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>New Relic / Google Analytics</span><span class="skill-pct">70%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Notion / Trello / Asana</span><span class="skill-pct">88%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-frameworks">
+        <h3 class="skills-col-title" style="text-align:center;margin-bottom:20px">Frameworks &amp; Methodologies</h3>
+        <div class="framework-chips">
+          <span class="fw-chip">SAFe® 6.0</span>
+          <span class="fw-chip">PI Planning</span>
+          <span class="fw-chip">Scrum</span>
+          <span class="fw-chip">Kanban</span>
+          <span class="fw-chip">OKRs</span>
+          <span class="fw-chip">Story Mapping</span>
+          <span class="fw-chip">WSJF Prioritisation</span>
+          <span class="fw-chip">CI/CD</span>
+          <span class="fw-chip">Microservice Architecture</span>
+          <span class="fw-chip">Design Thinking</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════ APPROACH ════════════════════════ -->
+  <section class="approach">
+    <div class="container">
+      <div class="section-label">HOW I WORK</div>
+      <h2 class="section-heading centered">My Product <em>Philosophy</em></h2>
+      <div class="approach-cards">
+
+        <div class="approach-card reveal">
+          <div class="approach-num">01</div>
+          <div class="approach-icon">🎯</div>
+          <h3 class="approach-title">Vision to Execution</h3>
+          <p class="approach-body">Taking big organisational goals and breaking them down into actionable epics, features, and sprint stories — ensuring zero gap between the C-suite vision and what the engineering team ships each sprint.</p>
+          <div class="approach-pills">
+            <span>OKRs</span><span>Epic Definition</span><span>PI Planning</span>
           </div>
         </div>
 
-        <div class="skills-group">
-          <h3 class="skills-group-title">Design &amp; Roadmap</h3>
-          <div class="skills-chips">
-            <span class="chip">Figma</span>
-            <span class="chip">ProductPlan</span>
-            <span class="chip">Miro Board</span>
+        <div class="approach-card reveal">
+          <div class="approach-num">02</div>
+          <div class="approach-icon">📊</div>
+          <h3 class="approach-title">Data-Driven Prioritisation</h3>
+          <p class="approach-body">Using agile metrics, WSJF scoring, value analysis, and risk assessment to ensure the right features are built in the right order — every sprint, every PI.</p>
+          <div class="approach-pills">
+            <span>WSJF</span><span>Burn-down</span><span>Velocity</span>
           </div>
         </div>
 
-        <div class="skills-group">
-          <h3 class="skills-group-title">Product Monitoring</h3>
-          <div class="skills-chips">
-            <span class="chip">New Relic</span>
-            <span class="chip">Google Analytics</span>
-          </div>
-        </div>
-
-        <div class="skills-group">
-          <h3 class="skills-group-title">Frameworks &amp; Methods</h3>
-          <div class="skills-chips">
-            <span class="chip">SAFe® 6.0</span>
-            <span class="chip">PI Planning</span>
-            <span class="chip">Scrum</span>
-            <span class="chip">Kanban</span>
-            <span class="chip">OKRs</span>
-            <span class="chip">Story Mapping</span>
+        <div class="approach-card reveal">
+          <div class="approach-num">03</div>
+          <div class="approach-icon">🤝</div>
+          <h3 class="approach-title">Empowered Team Culture</h3>
+          <p class="approach-body">Building autonomous, psychologically safe scrum teams through decentralised decision-making, coaching, and clear accountability — letting people take ownership of their work.</p>
+          <div class="approach-pills">
+            <span>SAFe® ASM</span><span>Retrospectives</span><span>Coaching</span>
           </div>
         </div>
 
@@ -287,49 +489,86 @@
     </div>
   </section>
 
-  <!-- ══════════════════════════ CERTIFICATIONS ══════════════════════════ -->
+  <!-- ════════════════════════ CERTIFICATIONS ════════════════════════ -->
   <section class="certifications">
     <div class="container">
       <div class="section-label">CERTIFICATIONS</div>
       <h2 class="section-heading centered">Recognised &amp; <em>Certified</em></h2>
       <div class="cert-cards">
-        <div class="cert-card">
-          <div class="cert-icon">🏅</div>
+
+        <div class="cert-card reveal">
+          <div class="cert-badge-visual">
+            <div class="cert-badge-ring">
+              <span class="cert-badge-inner">6.0</span>
+            </div>
+          </div>
           <h3 class="cert-title">SAFe® 6 Agile Product Management</h3>
-          <p class="cert-body">Certified by Scaled Agile Inc — covering product strategy, vision, and roadmapping within a SAFe enterprise.</p>
-          <span class="cert-issuer">Scaled Agile Inc</span>
+          <p class="cert-body">Covering product strategy, vision, and roadmapping within a SAFe enterprise. The most advanced SAFe product certification available.</p>
+          <div class="cert-footer">
+            <span class="cert-issuer">Scaled Agile Inc</span>
+            <div class="cert-dots"><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
         </div>
-        <div class="cert-card">
-          <div class="cert-icon">🏅</div>
+
+        <div class="cert-card reveal">
+          <div class="cert-badge-visual">
+            <div class="cert-badge-ring">
+              <span class="cert-badge-inner">5.0</span>
+            </div>
+          </div>
           <h3 class="cert-title">SAFe® 5 Product Owner / Product Manager</h3>
-          <p class="cert-body">Dual-role certification covering product backlog management and program increment execution in a scaled Agile environment.</p>
-          <span class="cert-issuer">Scaled Agile Inc</span>
+          <p class="cert-body">Dual-role certification covering backlog management and program increment execution in a scaled Agile environment.</p>
+          <div class="cert-footer">
+            <span class="cert-issuer">Scaled Agile Inc</span>
+            <div class="cert-dots"><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
         </div>
-        <div class="cert-card">
-          <div class="cert-icon">🏅</div>
+
+        <div class="cert-card reveal">
+          <div class="cert-badge-visual">
+            <div class="cert-badge-ring">
+              <span class="cert-badge-inner">ASM</span>
+            </div>
+          </div>
           <h3 class="cert-title">SAFe® 5 Advanced Scrum Master</h3>
           <p class="cert-body">Advanced facilitation skills for complex Agile transformations, cross-team coordination, and impediment removal at scale.</p>
-          <span class="cert-issuer">Scaled Agile Inc</span>
+          <div class="cert-footer">
+            <span class="cert-issuer">Scaled Agile Inc</span>
+            <div class="cert-dots"><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
         </div>
+
+      </div>
+
+      <!-- Achievement highlight -->
+      <div class="achievement-banner reveal">
+        <div class="achievement-icon">🏆</div>
+        <div class="achievement-text">
+          <strong>Outstanding Performance Award</strong>
+          <span>Employee Reward &amp; Recognition Programme — Gateway Group</span>
+        </div>
+        <div class="achievement-shimmer"></div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════ EDUCATION ═══════════════════════════ -->
+  <!-- ════════════════════════ EDUCATION ════════════════════════ -->
   <section class="education">
     <div class="container">
       <div class="section-label">EDUCATION</div>
       <h2 class="section-heading centered">Academic <em>Foundation</em></h2>
       <div class="edu-cards">
-        <div class="edu-card">
-          <div class="edu-year">2012 – 2014</div>
+        <div class="edu-card reveal">
+          <div class="edu-year-badge">2012 – 2014</div>
+          <div class="edu-icon">🎓</div>
           <h3 class="edu-degree">MBA — Marketing &amp; Operations</h3>
           <p class="edu-institute">B.K. School of Business Management</p>
           <span class="edu-grade">CGPA 3.66 / 4.0</span>
         </div>
-        <div class="edu-card">
-          <div class="edu-year">2006 – 2010</div>
-          <h3 class="edu-degree">B.Pharm</h3>
+        <div class="edu-card reveal">
+          <div class="edu-year-badge">2006 – 2010</div>
+          <div class="edu-icon">🔬</div>
+          <h3 class="edu-degree">Bachelor of Pharmacy (B.Pharm)</h3>
           <p class="edu-institute">LBRIPER, Gujarat University</p>
           <span class="edu-grade">First Class with Distinction</span>
         </div>
@@ -337,33 +576,48 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════ CONTACT CTA ═══════════════════════════ -->
+  <!-- ════════════════════════ CONTACT ════════════════════════ -->
   <section id="contact" class="contact-cta">
+    <canvas id="contactCanvas"></canvas>
     <div class="container">
       <div class="cta-inner">
         <div class="section-label">GET IN TOUCH</div>
         <h2 class="cta-heading">Let's Build Something<br /><em>Extraordinary</em></h2>
         <p class="cta-body">
-          Open to product leadership roles, consulting engagements, and speaking opportunities. Let's discuss how I can help your organisation scale.
+          Open to product leadership roles, consulting engagements, and speaking opportunities. Let's discuss how I can help your organisation scale with purpose.
         </p>
+        <div class="cta-contact-row">
+          <a href="mailto:mohanishshah89@gmail.com" class="cta-contact-item">
+            <span class="cta-contact-icon">✉</span>
+            <span>mohanishshah89@gmail.com</span>
+          </a>
+          <a href="tel:+919998848096" class="cta-contact-item">
+            <span class="cta-contact-icon">📞</span>
+            <span>+91 99988 48096</span>
+          </a>
+          <a href="https://www.linkedin.com/in/mohanish-shah-765b4848/" target="_blank" rel="noopener" class="cta-contact-item">
+            <span class="cta-contact-icon">in</span>
+            <span>LinkedIn Profile</span>
+          </a>
+        </div>
         <div class="cta-buttons">
           <a href="mailto:mohanishshah89@gmail.com" class="btn-primary">Start a Conversation →</a>
-          <a href="https://www.linkedin.com/in/mohanish-shah-765b4848/" target="_blank" rel="noopener" class="btn-secondary">LinkedIn Profile</a>
+          <a href="assets/Mohanish_CV.pdf" class="btn-secondary" download>Download CV</a>
         </div>
-        <p class="cta-email">mohanishshah89@gmail.com &nbsp;·&nbsp; +91 99988 48096</p>
       </div>
     </div>
   </section>
 
-  <!-- ════════════════════════════ FOOTER ════════════════════════════ -->
+  <!-- ════════════════════════ FOOTER ════════════════════════ -->
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
         <span class="footer-logo">MS</span>
-        <p class="footer-copy">© 2025 Mohanish Shah. All rights reserved.</p>
+        <p class="footer-copy">© 2025 Mohanish Shah · Senior Product Manager</p>
         <div class="footer-links">
           <a href="https://www.linkedin.com/in/mohanish-shah-765b4848/" target="_blank" rel="noopener">LinkedIn</a>
           <a href="mailto:mohanishshah89@gmail.com">Email</a>
+          <a href="assets/Mohanish_CV.pdf" download>CV</a>
         </div>
       </div>
       <p class="footer-name">MOHANISH SHAH</p>
